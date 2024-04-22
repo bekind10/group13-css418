@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Coursereg.css">
+<title>Course Registration</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1> Course Registration Portal</h1>
+    <nav>
+        <ul>
+            <li><a href="./home.html"><button type="button" onclick="Home()">Home</button></a></li>
+            <li><a href="#"><button type="button" onclick="Result()">Result</button></a></li>
+            <li><a href="./remita.html"><button type="button" onclick="Payment()">Payment</button></a></li>
+            <li><a href="#"><button type="button" onclick="OtherServices()">Other Services</button></a></li>
+            <button  class="logout-btn" onclick="logout()">Logout</button>
+
+        </ul>
+        
+    </nav>
+</header><style>
+  /* CSS for styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    margin-top: 0;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  select, button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  select:focus, button:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  select {
+    width: 100%;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Choose Your Level:</h2>
+
+  <select id="categorySelect" onchange="showItems()">
+    <option value="none">Select a Level</option>
+    <option value="category1">100 Level</option>
+    <option value="category2">200 Level</option>
+    <option value="category2">300 Level</option>
+    <option value="category2">400 Level</option>
+    <option value="category2">500 Level</option>
+  </select>
+
+  <div id="itemList" class="hidden">
+    <h2>Select the courses to register:</h2>
+    <form id="itemForm">
+      <label><input type="checkbox" name="item" value="FUTM-CYB112 - Introduction to Cyber Security Tools">FUTM-CYB112 - Introduction to Cyber Security Tools</label>
+      <label><input type="checkbox" name="item" value="GST103 - Nigerian People and Culture">GST103 - Nigerian People and Culture</label>
+      <label><input type="checkbox" name="item" value="WKS111 - Workshop Practice">WKS111 - Workshop Practice</label>
+      <label><input type="checkbox" name="item" value="TCD111 - Introduction to technical Drawing">TCD111 - Introduction to technical Drawing</label>
+      <label><input type="checkbox" name="item" value="PHY113 - General Physics I (Mechanics, Thermal Physics and Waves)">PHY113 - General Physics I (Mechanics, Thermal Physics and Waves)</label>
+      <label><input type="checkbox" name="item" value="FUTM-CYB111 - Fundamentals of Cyber Security">FUTM-CYB111 - Fundamentals of Cyber Security</label>
+      <label><input type="checkbox" name="item" value="GST121 - Use of English II">GST121 - Use of English II</label>
+      <label><input type="checkbox" name="item" value="GST110 - Use of English I and Library">GST110 - Use of English I and Library</label>
+      <label><input type="checkbox" name="item" value="COS101 - Introduction to Computing Sciences">COS101 - Introduction to Computing Sciences</label>
+      <label><input type="checkbox" name="item" value="STA111 - Descriptive Statistics">STA111 - Descriptive Statistics</label>
+      <label><input type="checkbox" name="item" value="COS102 - Introduction to Problem Solving">COS102 - Introduction to Problem Solving</label>
+      <label><input type="checkbox" name="item" value="PHY102 - General Physics II">PHY102 - General Physics II</label>
+      <label><input type="checkbox" name="item" value="MTH102 - Elementary Mathematics II">MTH102 - Elementary Mathematics II</label>
+      <label><input type="checkbox" name="item" value="PHY108 - General Practical Physics II">PHY108 - General Practical Physics II</label>
+      <label><input type="checkbox" name="item" value="FUTM-CYB122 - Cyber Security in Nigeria">FUTM-CYB122 - Cyber Security in Nigeria</label>
+      <label><input type="checkbox" name="item" value="GST111 - Communication in English">GST111 - Communication in English</label>
+      <label><input type="checkbox" name="item" value="CIT224 - Discrete Structure">CIT224 - Discrete Structure</label>
+      <label><input type="checkbox" name="item" value="CPT224 - Web Application Development">CPT224 - Web Application Development</label>
+      <label><input type="checkbox" name="item" value="CSS211 - Fundamentals of Cyber Security II">CSS211 - Fundamentals of Cyber Security II</label>
+      <label><input type="checkbox" name="item" value="CSS213 - Introduction to Digital Forensics">CSS213 - Introduction to Digital Forensics</label>
+      <label><input type="checkbox" name="item" value="CPT211 - Computer Programming I">CPT211 - Computer Programming I</label>
+      <label><input type="checkbox" name="item" value="CSS315 - Systems Security">CSS315 - Systems Security</label>
+      <label><input type="checkbox" name="item" value="CSS312 - Cryptographic Techniques">CSS312 - Cryptographic Techniques</label>
+      <label><input type="checkbox" name="item" value="CPT323 - Automata, Computability and Complexity">CPT323 - Automata, Computability and Complexity</label>
+      <label><input type="checkbox" name="item" value="CSS324 - OPERATING SYSTEM SECURITY">CSS324 - OPERATING SYSTEM SECURITY</label>
+      <label><input type="checkbox" name="item" value="CSS323 - CYBER CRIME LAW">CSS323 - CYBER CRIME LAW</label>
+      <label><input type="checkbox" name="item" value="CPT419 - Software Engineering">CPT419 - Software Engineering</label>
+      <label><input type="checkbox" name="item" value="CSS416 - Research Methodology">CSS416 - Research Methodology</label>
+      <label><input type="checkbox" name="item" value="siw400 - Student Industrial Work Experience Scheme (SIWES)">siw400 - Student Industrial Work Experience Scheme (SIWES)</label>
+      <label><input type="checkbox" name="item" value="CSS415 - VoIP and Multimedia Security">CSS415 - VoIP and Multimedia Security</label>
+      <label><input type="checkbox" name="item" value="CIT415 - Introduction to Scientific Report Writing and Methodology">CIT415 - Introduction to Scientific Report Writing and Methodology</label>
+      <label><input type="checkbox" name="item" value="CSS511 - ENTERPRENURESHIP II">CSS511 - ENTERPRENURESHIP II</label>
+      <label><input type="checkbox" name="item" value="CSS522 - CURRENT TRENDS IN CYBER SECURITY">CSS522 - CURRENT TRENDS IN CYBER SECURITY</label>
+      <label><input type="checkbox" name="item" value="CSS523 - DEVELOPMENT IN THE J2EE ENVIRONMENT">CSS523 - DEVELOPMENT IN THE J2EE ENVIRONMENT</label>
+      <label><input type="checkbox" name="item" value="CPT522 - DATA MINING">CPT522 - DATA MINING</label>
+      <label><input type="checkbox" name="item" value="CSS529 - PROJECT">CSS529 - PROJECT</label>
+
+      <button type="button" onclick="submitForm()">Submit</button>
+<button><a href="home.html" style="text-decoration: none; color: #fff;">Back Home</a></button>
+    </form>
+  </div>
+
+  <div id="selectedItems"></div>
+</div>
+
+<script>
+  // JavaScript for showing items based on selected category
+  function showItems() {
+    const categorySelect = document.getElementById('categorySelect');
+    const itemList = document.getElementById('itemList');
+    if (categorySelect.value !== 'none') {
+      itemList.classList.remove('hidden');
+    } else {
+      itemList.classList.add('hidden');
+    }
+  }
+
+  // JavaScript for handling form submission
+  function submitForm() {
+    const form = document.getElementById('itemForm');
+    const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+    const selectedItems = [];
+    checkboxes.forEach((checkbox) => {
+      selectedItems.push(checkbox.value);
+    });
+    const selectedItemsDisplay = document.getElementById('selectedItems');
+    selectedItemsDisplay.innerHTML = '<h2>Selected Items:</h2><ul>' + selectedItems.map(item => '<li>' + item + '</li>').join('') + '</ul>';
+  }
+</script>
+</body>
+</html>

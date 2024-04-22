@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1> Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#"><button type="button" onclick="Home()">Home</button></a></li>
+                <li><a href="#"><button type="button" onclick="Result()">Result</button></a></li>
+                <li><a href="./remita.html"><button type="button" onclick="Payments()">Payments</button></a></li>
+                <li><a href="#"><button type="button" onclick="OtherServices()">Other Services</button></a></li>
+                <button  class="logout-btn" onclick="logout()">Logout</button>
+
+            </ul>
+            
+        </nav>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>STUDENT DATA</h2>
+            <ul>
+                <li><a href="#"><button  class="BioData" onclick="BioData()">BIODATA</button></a></li>
+                <li><a href="#"><button  class="Results" onclick="Results()">RESULT</button></a></li>
+                <li><a href="./Coursereg.html"><button  class="Coursereg" onclick="Coursereg()">COURSE REGISTRATION</button></a></li>
+                <li><a href="./remita.html"><button  class="Payments" onclick="Payments()">PAYMENTS</button></a></li>
+
+            </ul>
+
+        </aside>
+
+        <main class="main-content">
+            <div class="card green">
+                <h2>ACCEPTANCE FEE</h2>
+                <p>Yes</p>
+            </div>
+            <div class="card blue">
+                <h2>REGISTRATION FEE</h2>
+                <p>Yes</p>
+            </div>
+            <div class="card indigo">
+                <h2>ACCOMODATION</h2>
+                <p>Yes</p>
+            </div>
+            <div class="card red">
+                <h2>OTHER SERVICES</h2>
+                <p>No</p>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; Group 13. All rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

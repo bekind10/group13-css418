@@ -1,0 +1,57 @@
+body{
+    background-color: url(light grey);
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #itemList {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    h2 {
+        margin-top: 0;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    #selectedItems {
+        margin-top: 20px;
+    }
+    
+    #selectedItems h3 {
+        margin-top: 0;
+    }
+    
+    #selectedItems ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    #selectedItems li {
+        margin-bottom: 5px;
+    }
+    
+    
+    }
